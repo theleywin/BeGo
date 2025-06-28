@@ -1,13 +1,20 @@
+import { BrowserRouter, Route, Routes } from "react-router";
+import CargoOrders from "./pages/CargoOrder.tsx";
+import MenuBar from "./components/MenuBar.tsx";
 
 function App() {
 
-  return (
-    <>
-      <div className="text-4xl font-bold text-center my-8">
-          Cargo Orders
-      </div>
-    </>
-  )
+    return (
+        <>
+            <BrowserRouter>
+                <Routes>
+                    <Route element={<MenuBar />}>
+                        <Route path="/" element={<CargoOrders />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </>
+    )
 }
 
 export default App

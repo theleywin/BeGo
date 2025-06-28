@@ -29,13 +29,13 @@ const Nav = ({ selected, setSelected }: NavProps) => {
                     key={tab}
                     ref={el => {tabRefs.current[index] = el;}}
                     onClick={() => setSelected(index)}
-                    className={`relative cursor-pointer ${index === selected ? 'text-[#FFEE00]' : 'text-[#D9D9D9]'}`}
+                    className={`relative cursor-pointer ${index === selected ? 'text-bego' : 'text-[#D9D9D9]'}`}
                 >
                     <h1 className={"text-[14px]"}>{tab}</h1>
                 </button>
             ))}
             <span
-                className="absolute h-[2px] bg-[#FFEE00] bottom-[-10px] transition-all duration-300"
+                className="absolute h-[2px] bg-bego bottom-[-10px] transition-all duration-300"
                 style={{ left: indicatorStyle.left , width: indicatorStyle.width - 25 }}
             />
         </nav>

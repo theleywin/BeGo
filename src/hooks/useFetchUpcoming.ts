@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
+import type { Order } from "../types/order"
 
 const useFetchUpcoming = () => {
-    const [ordersUpcoming, setOrdersUpcoming] = useState([])
+    const [ordersUpcoming, setOrdersUpcoming] = useState<Order[]>([])
 
     useEffect(() => {
         const fetchUpcoming = async () => {

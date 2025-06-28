@@ -24,7 +24,7 @@ const Nav = () => {
             {tabs.map((tab, index) => (
                 <button
                     key={tab}
-                    ref={el => tabRefs.current[index] = el}
+                    ref={el => {tabRefs.current[index] = el;}}
                     onClick={() => setSelected(index)}
                     className={`relative cursor-pointer ${index === selected ? 'text-[#FFEE00]' : 'text-[#D9D9D9]'}`}
                 >

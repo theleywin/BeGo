@@ -1,3 +1,5 @@
+import type {Destination} from "./destination.ts";
+
 export type Order = {
     _id: string;
     status: number;

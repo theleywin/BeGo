@@ -1,10 +1,14 @@
 import {Truck} from '../assets/truck.tsx';
 import { getCityFromAddress, formatDate, formatTime } from '../utils/formatters.ts';
 import {Ubi} from "../assets/ubi.tsx";
+import type { Destination } from '../types/destination';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-const PickupInfo = ({destination, type}) => {
+interface PickupInfoProps {
+    destination: Destination;
+    type: 'pickup' | 'dropoff';
+}
+
+const PickupInfo = ({destination, type}: PickupInfoProps) => {
     return (
         <div className='flex items-center gap-3 justify-around'>
             <div>{type === 'pickup' ? <Truck /> : <Ubi/>}</div>

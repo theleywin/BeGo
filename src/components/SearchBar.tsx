@@ -1,9 +1,11 @@
 import {SearchIcon} from "../assets/search.tsx";
 
+interface SearchBarProps {
+    searchTerm: string;
+    onSearch: (value: string) => void;
+}
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-const SearchBar = ({ searchTerm, onSearch }) => {
+const SearchBar = ({ searchTerm, onSearch }: SearchBarProps) => {
     return (
         <div className="flex items-center justify-center mx-auto border-b-2 border-[#2C2C2C] my-[30px] w-[349px]">
            <SearchIcon/>

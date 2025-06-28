@@ -23,17 +23,3 @@ export const formatTime = (timestamp: Timestamp): string => {
     const minutes = date.getMinutes();
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
 };
-
-export function formatDateComplete(timestamp: Timestamp): string {
-    const months = [
-        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
-        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
-    ];
-    if (!timestamp) return '';
-    const date = new Date(timestamp);
-    if (isNaN(date.getTime())) return '';
-    const day = date.getUTCDate();
-    const month = months[date.getUTCMonth()];
-    const year = date.getUTCFullYear();
-    return `${day} de ${month} de ${year}`;
-}

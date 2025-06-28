@@ -1,8 +1,8 @@
-import OrderHeader from "./OrderHeader";
-import OrderStatusBar from "./OrderStatusBar";
-import OrderTypeStatus from "./OrderTypeStatus";
-import OrderDetails from "./OrderDetails";
-import OrderActions from "./OrderActions";
+import OrderHeader from "./OrderHeader.tsx";
+import OrderStatusBar from "./OrderStatusBar.tsx";
+import OrderTypeStatus from "./OrderTypeStatus.tsx";
+import OrderDetails from "./OrderDetails.tsx";
+import OrderActions from "./OrderActions.tsx";
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error

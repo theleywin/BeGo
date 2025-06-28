@@ -2,9 +2,12 @@ import { useState, useRef, useEffect } from "react";
 
 const tabs = ["Upcoming", "Completed", "Past"];
 
+interface NavProps {
+    selected: number;
+    setSelected: (index: number) => void;
+}
 
-const Nav = () => {
-    const [selected, setSelected] = useState(0);
+const Nav = ({ selected, setSelected }: NavProps) => {
     const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
     const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0 });
 

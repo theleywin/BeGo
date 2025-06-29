@@ -26,7 +26,7 @@ const CargoOrders = () => {
         <main className="flex flex-col">
             <Nav selected={selectedTab} setSelected={setSelectedTab} />
             <SearchBar searchTerm={searchTerm} onSearch={setSearchTerm} />
-            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-start justify-center mx-auto w-full max-w-7xl">
+            <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center mx-auto w-full max-w-7xl">
                 {filteredOrders.map((order) => (
                     <OrderCard key={order._id} order={order} />
                 ))}

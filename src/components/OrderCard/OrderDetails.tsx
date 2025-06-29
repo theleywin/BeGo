@@ -1,8 +1,9 @@
 import PickupInfo from "../PickupInfo.tsx";
+import type {Destination} from "../../types/destination.ts";
 
 interface OrderDetailsProps {
-  pickup: any;
-  dropoff: any;
+  pickup: Destination;
+  dropoff: Destination;
 }
 
 const OrderDetails = ({ pickup, dropoff }: OrderDetailsProps) => (

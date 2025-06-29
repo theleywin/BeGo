@@ -1,7 +1,7 @@
-import {Truck} from '../assets/Truck.tsx';
-import { getCityFromAddress, formatDate, formatTime } from '../utils/formatters.ts';
-import {Ubi} from "../assets/Ubi.tsx";
-import type { Destination } from '../types/destination';
+import {Truck} from '../../assets/Truck.tsx';
+import { getCityFromAddress, formatDate, formatTime } from '../../utils/formatters.ts';
+import {Ubi} from "../../assets/Ubi.tsx";
+import type { Destination } from '../../types/destination.ts';
 
 interface PickupInfoProps {
     destination: Destination;

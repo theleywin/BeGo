@@ -1,4 +1,4 @@
-import {SearchIcon} from "../assets/Search.tsx";
+import {SearchIcon} from "../../assets/Search.tsx";
 
 interface SearchBarProps {
     searchTerm: string;

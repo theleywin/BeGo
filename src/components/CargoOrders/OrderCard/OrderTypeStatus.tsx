@@ -1,5 +1,5 @@
-import { Transit } from "../../assets/Transit.tsx";
-import { Assigned } from "../../assets/Assigned.tsx";
+import { Transit } from "../../../assets/Transit.tsx";
+import { Assigned } from "../../../assets/Assigned.tsx";
 
 interface OrderTypeStatusProps {
   inTransit: boolean;

@@ -1,7 +1,7 @@
 # Cargo Tracking App
 
 Esta es la solución brindada a la prueba técnica. A continuación se presentan las tecnologías utilizadas y las prácticas seguidas.
-![link al deploy](https://bego-test-pablo.vercel.app/)
+[link al proyecto](https://bego-test-pablo.vercel.app/)
 
 
 ## Tecnologías Utilizadas

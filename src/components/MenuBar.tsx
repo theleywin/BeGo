@@ -1,10 +1,12 @@
-import { useNavigate, Outlet } from "react-router-dom";
+import { useNavigate, Outlet, useLocation } from "react-router-dom";
 import Notification from "../assets/Notification.tsx";
 import ArrowLeft from "../assets/ArrowLeft.tsx";
 
 
 const Header: React.FC = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const isDetailsPage = location.pathname === '/details';
 
     return (
         <>
@@ -12,7 +14,7 @@ const Header: React.FC = () => {
                 <button onClick={() => navigate('/')}>
                     <ArrowLeft/>
                 </button>
-                <h1>{false ? 'Cargo Details' : 'Cargo Orders'}</h1>
+                <h1>{isDetailsPage ? 'Cargo Details' : 'Cargo Orders'}</h1>
                 <Notification/>
             </header>
             <Outlet />

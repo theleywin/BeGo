@@ -1,7 +1,7 @@
-import Nav from "../components/Nav.tsx";
+import Nav from "../components/CargoOrders/Nav.tsx";
 import useFetchUpcoming from "../hooks/useFetchUpcoming.ts";
-import SearchBar from "../components/SearchBar.tsx";
-import OrderCard from "../components/OrderCard/OrderCard.tsx";
+import SearchBar from "../components/CargoOrders/SearchBar.tsx";
+import OrderCard from "../components/CargoOrders/OrderCard/OrderCard.tsx";
 import { useState } from "react";
 
 const CargoOrders = () => {

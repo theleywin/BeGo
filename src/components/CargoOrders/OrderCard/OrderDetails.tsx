@@ -1,5 +1,5 @@
 import PickupInfo from "../PickupInfo.tsx";
-import type {Destination} from "../../types/destination.ts";
+import type {Destination} from "../../../types/destination.ts";
 
 interface OrderDetailsProps {
   pickup: Destination;

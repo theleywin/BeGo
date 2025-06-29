@@ -27,7 +27,7 @@ const OrderCard = ({order}: OrderCardProps) => {
                     <div className="flex flex-col justify-between h-full w-full rounded-[17.5px] bg-[#3534344e]">
                         <OrderTypeStatus inTransit={inTransit} type={order.type} />
                         <OrderDetails pickup={pickup} dropoff={dropoff} />
-                        <OrderActions inTransit={inTransit} orderNumber={order.order_number} start_date={order.start_date} />
+                        <OrderActions inTransit={inTransit} start_date={order.start_date} />
                         {/*<OrderActions inTransit={inTransit} orderNumber={order.order_number} start_date={Date.now() + 36000000} />*/}
                     </div>
                 </div>

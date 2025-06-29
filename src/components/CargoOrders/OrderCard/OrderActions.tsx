@@ -3,12 +3,11 @@ import { Eye } from "../../../assets/Eye.tsx";
 import { formatTimeDiff } from "../../../utils/formatters.ts";
 interface OrderActionsProps {
     inTransit: boolean;
-    orderNumber: string | number;
     start_date: number;
 }
 
 
-const OrderActions = ({ inTransit, orderNumber, start_date }: OrderActionsProps) => {
+const OrderActions = ({ inTransit, start_date }: OrderActionsProps) => {
     const now = Date.now();
     const timeDiff = start_date - now;
     const isPickupTime = timeDiff <= 0;
@@ -36,7 +35,7 @@ const OrderActions = ({ inTransit, orderNumber, start_date }: OrderActionsProps)
                     </button>
                 )
             )}
-            <Link to={`/${orderNumber}`} className="!p-3 w-[130px] flex items-center justify-around rounded-l-full rounded-br-full bg-bego text-[#080b11] backdrop-blur-[70px] shadow-[inset_-4px_-4px_4px_0px_rgba(194,181,0,1)]">
+            <Link to={`/details`} className="!p-3 w-[130px] flex items-center justify-around rounded-l-full rounded-br-full bg-bego text-[#080b11] backdrop-blur-[70px] shadow-[inset_-4px_-4px_4px_0px_rgba(194,181,0,1)]">
                 <p>Resume</p>
                 <Eye />
             </Link>

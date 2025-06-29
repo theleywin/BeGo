@@ -19,7 +19,7 @@ const OrderCard = ({order}: OrderCardProps) => {
     const inTransit = isInTransit();
 
     return (
-        <div className="!mx-[40px] !mb-[39px] w-[347px] h-[336px] flex flex-col">
+        <div className="!mx-[40px] !mb-[39px] min-w-[339px] md:w-[347px] lg:w-[347px] h-[301px] flex flex-col">
             <OrderHeader orderNumber={order.order_number} />
             <div className="relative bg-black rounded-[20px]">
                 <OrderStatusBar inTransit={inTransit} />

@@ -13,7 +13,7 @@ const CargoOrders = () => {
     if (selectedTab === 1) {
         filteredOrders = ordersUpcoming.filter(order => order?.status_string === 'Recolección completada');
     } else if (selectedTab === 2) {
-        filteredOrders = [];
+        filteredOrders =ordersUpcoming.filter(order => order?.status_string === 'Orden Asignada');
     }
 
     if (searchTerm) {

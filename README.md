@@ -1,69 +1,58 @@
-# React + TypeScript + Vite
+# Cargo Tracking App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es la solución brindada a la prueba técnica. A continuación se presentan las tecnologías utilizadas y las prácticas seguidas.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tecnologías Utilizadas
 
-## Expanding the ESLint configuration
+- **React + TypeScript:** Desarrollo de la interfaz de usuario con tipado estático y componentes reutilizables.
+- **Vite:** Herramienta de build y desarrollo rápido para proyectos modernos de frontend.
+- **TailwindCSS:** Utilizado para el diseño responsivo y la rápida maquetación de estilos.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Prácticas y Estructura
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Componentización:** El proyecto está dividido en componentes pequeños y reutilizables, facilitando el mantenimiento y la escalabilidad.
+- **Tipado Estricto:** Uso intensivo de TypeScript para evitar errores comunes.
+- **Estructura de las Carpetas:** Separación clara entre componentes,páginas, hooks, contextos, utilidades y tipos.
+- **Estilos Consistentes:** Uso de TailwindCSS para mantener una apariencia uniforme y responsiva.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Estructura de Carpetas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `src/components`: Componentes reutilizables de la interfaz.
+- `src/pages`: Vistas principales de la aplicación.
+- `src/context`: Contextos globales para manejo de estado.
+- `src/hooks`: Hooks personalizados para lógica reutilizable.
+- `src/utils`: Funciones utilitarias y formateadores.
+- `src/types`: Definiciones de tipos y modelos de datos.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Cómo iniciar el proyecto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+2. Iniciar el entorno de desarrollo:
+   ```bash
+   npm run dev
+   ```
+---
+## Ejemplos de lógica aplicada en la página
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### En Cargo Orders
+#### Caso donde el status de la orden es "Orden Asignada" => Assigned
+![Assigned](public/Assigned.png)
+
+#### Caso donde el status de la orden es "Recolección completada" => In transit, y ya se cumplió el start_date
+![itsTimeForPickup](public/itsTimeForPickup.png)
+
+#### Caso donde el status de la orden es "Recolección completada" => In transit, y aún no se ha cumplido el start_date
+![startPickupIn](public/startPickupIn.png)
+
+### En Cargo Details
+#### Caso donde se habilita el botón de Track Order
+![Track](public/track.png)
+
+#### Caso donde no se habilita el botón de Track Order
+![Track](public/noTrack.png)
+
+

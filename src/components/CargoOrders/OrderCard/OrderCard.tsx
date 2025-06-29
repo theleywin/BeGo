@@ -28,7 +28,7 @@ const OrderCard = ({order}: OrderCardProps) => {
                         <OrderTypeStatus inTransit={inTransit} type={order.type} />
                         <OrderDetails pickup={pickup} dropoff={dropoff} />
                         <OrderActions inTransit={inTransit} start_date={order.start_date} />
-                        {/*<OrderActions inTransit={inTransit} orderNumber={order.order_number} start_date={Date.now() + 36000000} />*/}
+                        {/* <OrderActions inTransit={inTransit}  start_date={Date.now() + 36000000} />*/}
                     </div>
                 </div>
             </div>

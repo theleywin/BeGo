@@ -40,7 +40,7 @@ Esta es la solución brindada a la prueba técnica. A continuación se presentan
 
 ### En Cargo Orders
 #### Caso donde el status de la orden es "Orden Asignada" => Assigned
-![Assigned](public/Assigned.png)
+![Assigned](public/assigned.png)
 
 #### Caso donde el status de la orden es "Recolección completada" => In transit, y ya se cumplió el start_date
 ![itsTimeForPickup](public/itsTimeForPickup.png)

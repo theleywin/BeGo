@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Eye } from "../../assets/eye.tsx";
+import { Eye } from "../../assets/Eye.tsx";
 import { formatTimeDiff } from "../../utils/formatters.ts";
 interface OrderActionsProps {
     inTransit: boolean;

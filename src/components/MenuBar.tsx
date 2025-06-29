@@ -1,6 +1,6 @@
 import { useNavigate, Outlet } from "react-router-dom";
-import Notification from "../assets/notification.tsx";
-import ArrowLeft from "../assets/arrow.tsx";
+import Notification from "../assets/Notification.tsx";
+import ArrowLeft from "../assets/ArrowLeft.tsx";
 
 
 const Header: React.FC = () => {
